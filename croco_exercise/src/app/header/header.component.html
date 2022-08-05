@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <mat-toolbar-row class="justify-content-between">
+    <div class="header header__wrapper">
+      <div class="header--right">
+        <ul class="nav nav--list">
+          <li class="nav--logout">
+            <div class="header__logout" (click)="onLogout()">
+              <a [routerLink]="['']">
+                <img src="../assets/images/logout.svg" alt="logout" />
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

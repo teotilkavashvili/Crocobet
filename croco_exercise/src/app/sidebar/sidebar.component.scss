@@ -1,0 +1,49 @@
+:host {
+  .mat-icon {
+    vertical-align: middle;
+    margin-right: 1rem;
+  }
+}
+.logo {
+  text-align: center;
+  padding: 2px 10px;
+  img {
+    width: 58px;
+    height: 45px;
+  }
+}
+
+.mat-list-item {
+  font-family: "Neue Croco sans Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: #6a7787;
+  margin-top: 40px;
+  height: 77px;
+  img {
+    margin-bottom: 9px;
+  }
+  &:hover {
+    color: #ffffff !important;
+  }
+  img:hover {
+    filter: invert(99%) sepia(0%) saturate(3%) hue-rotate(119deg)
+      brightness(118%) contrast(100%);
+  }
+}
+
+.mat-list-item ::ng-deep {
+  .mat-list-item-content {
+    flex-direction: column !important;
+  }
+}
+.list-item-active {
+  color: #f2f5f7 !important;
+  border-left: 2px solid #189541 !important;
+  img {
+    filter: invert(99%) sepia(0%) saturate(3%) hue-rotate(119deg)
+      brightness(118%) contrast(100%);
+  }
+}
