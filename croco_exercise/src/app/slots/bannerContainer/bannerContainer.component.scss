@@ -1,0 +1,156 @@
+.bannerWithFilter {
+  background-color: #1a1e23;
+  padding: 8px;
+}
+
+.banner {
+  width: 100%;
+  // padding: 0.5rem;
+  img {
+    width: 100%;
+    border-radius: 6px;
+  }
+}
+
+.filter {
+  width: 100%;
+  height: auto;
+  background: #1d242c;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: 12px;
+  margin-top: 8px;
+
+  .category__slots {
+    height: 53px;
+    display: flex;
+    gap: 28px;
+
+    .category__list {
+      display: inline-block;
+      display: flex;
+      position: relative;
+
+      .category__name {
+        position: relative;
+        // min-height: 52px;
+        margin: 0 10px;
+        padding: 15px 10px 16px;
+        opacity: 0.6;
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 14px;
+        font-stretch: normal;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.84px;
+        line-height: normal;
+        text-align: left;
+        cursor: pointer;
+        &:hover {
+          border-bottom: 4px solid #15af44;
+          img {
+            filter: none;
+          }
+          span {
+            color: #15af44;
+          }
+        }
+
+        img {
+          width: 18px;
+          margin-right: 5px;
+          transform: translateY(3px);
+          filter: grayscale(100%) brightness(250%);
+        }
+
+        span {
+          position: absolute;
+          top: 7px;
+          right: -10px;
+          width: 20px;
+          color: #ffffff;
+          font-size: 11px;
+          font-weight: 500;
+          letter-spacing: 0.66px;
+          text-align: left;
+        }
+
+        // font-family: "Neue Croco Sans";
+        // font-style: normal;
+        // font-weight: 400;
+        // font-size: 14px;
+        // line-height: 14px;
+        // color: #ffffff;
+        // margin-left: 10px;
+      }
+    }
+    &__name {
+      img {
+        width: 15px;
+      }
+    }
+  }
+  .provider__slots {
+    background: #272d36;
+    border-radius: 0 0 6px 6px;
+
+    .provider__list {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      height: 53px;
+      overflow: hidden;
+      .provider__name {
+        font-family: "Neue Croco sans Medium";
+        line-height: 14px;
+        color: #d9e3ef;
+        position: relative;
+        margin: 0 10px;
+        padding: 15px 10px 16px;
+        opacity: 0.6;
+        background-color: transparent;
+        color: #d9e3ef;
+        font-size: 14px;
+        font-stretch: normal;
+        font-style: normal;
+        font-weight: 500;
+        letter-spacing: 0.84px;
+        line-height: normal;
+        text-align: left;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &:hover {
+          opacity: 1;
+          color: #ffffff;
+          border-bottom: 4px solid #15af44;
+        }
+      }
+    }
+    .seeMore {
+      font-family: "Neue Croco sans Medium";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 14px;
+      color: #ffffff;
+      padding: 17px 20px 13px;
+      float: right;
+      background: transparent;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+}
+
+.see-more-btn__arrow {
+  width: 14px;
+  margin-left: 12px;
+  transform: rotate(180deg);
+  transition: 0.2s;
+}
+
+.icon-active {
+  transform: scaleY(1);
+  // transform: rotate(0);
+}

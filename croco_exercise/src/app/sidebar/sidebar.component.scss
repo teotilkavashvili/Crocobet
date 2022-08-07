@@ -27,10 +27,9 @@
   }
   &:hover {
     color: #ffffff !important;
-  }
-  img:hover {
-    filter: invert(99%) sepia(0%) saturate(3%) hue-rotate(119deg)
-      brightness(118%) contrast(100%);
+    img {
+      filter: brightness(0) invert(1);
+    }
   }
 }
 
@@ -43,7 +42,6 @@
   color: #f2f5f7 !important;
   border-left: 2px solid #189541 !important;
   img {
-    filter: invert(99%) sepia(0%) saturate(3%) hue-rotate(119deg)
-      brightness(118%) contrast(100%);
+    filter: brightness(0) invert(1);
   }
 }
