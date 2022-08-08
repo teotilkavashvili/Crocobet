@@ -11,9 +11,12 @@ export class BannerContainerComponent implements OnInit {
   categories: any;
   providers: any;
   seeMoreLess: boolean = false;
+  filteredSlots: any = {};
   action = 'See More';
 
   category = 'desktop';
+  selectedIndex: number = 0;
+  selectedI: number = null;
   constructor(
     private categoryService: SlotCategoryService,
     private providerService: SlotproviderService
@@ -26,19 +29,33 @@ export class BannerContainerComponent implements OnInit {
 
   fillSlotCategoryGrid() {
     this.categoryService.getSlotCategories().subscribe((categories: any) => {
-      console.log(categories.data);
+      // console.log(categories.data);
       this.categories = categories.data.filter(
         (el) => this.category == el?.platform
       );
-      console.log(this.categories);
+      this.filteredSlots = this.categories[0].games;
     });
   }
 
   getSlotPrividers() {
     this.providerService.getSlotProviders().subscribe((providers: any) => {
       this.providers = providers.data;
-      console.log(this.providers);
     });
+  }
+  categorySearch(item, index) {
+    this.filteredSlots = item?.games;
+    this.selectedIndex = index;
+    this.selectedI = null;
+  }
+
+  providerSearch(item, index) {
+    this.providerService
+      .getSlotsbyProvider(item.provider)
+      .subscribe((slots: any) => {
+        this.filteredSlots = slots.data.games;
+      });
+    this.selectedIndex = null;
+    this.selectedI = index;
   }
 
   seeMore() {

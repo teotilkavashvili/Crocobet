@@ -13,4 +13,11 @@ export class SlotproviderService {
   getSlotProviders(): Observable<any[]> {
     return this.http.get<any[]>(this.baseUrl + '?type=slot&platform=desktop');
   }
+
+  getSlotsbyProvider(providerId): Observable<any[]> {
+    console.log(providerId);
+    return this.http.get<any[]>(
+      `${this.baseUrl}/v2/slot/providers/${providerId}?platform=desktop`
+    );
+  }
 }

@@ -14,3 +14,7 @@ mat-drawer-container {
 mat-drawer {
   background: #252b33;
 }
+
+::ng-deep.mat-drawer-inner-container {
+  overflow: hidden !important;
+}

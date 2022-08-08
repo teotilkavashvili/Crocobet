@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { BannerContainerComponent } from './slots/bannerContainer/bannerContainer.component';
 import { SlotsComponent } from './slots/slots/slots.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilteredSlotsComponent } from './slots/filteredSlots/filteredSlots.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     SidebarComponent,
     SlotsComponent,
     BannerContainerComponent,
+    FilteredSlotsComponent,
   ],
   imports: [
     BrowserModule,

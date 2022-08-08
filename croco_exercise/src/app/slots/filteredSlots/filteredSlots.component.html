@@ -1,0 +1,17 @@
+<div class="slot__list">
+  <div class="slot" *ngFor="let item of filteredSlots">
+    <div class="slot__status">
+      <div class="status__name" *ngIf="item?.tags[0]">{{ item?.tags[0] }}</div>
+      <div class="slot__cover">
+        <img [src]="item.image" alt="no image" />
+        <div class="overlay">
+          <span>{{ item.providerName }}</span>
+          <button>ითამაშე</button>
+        </div>
+      </div>
+      <div class="slot__title">
+        <span>{{ item.name }}</span>
+      </div>
+    </div>
+  </div>
+</div>
